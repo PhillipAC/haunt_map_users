@@ -1,0 +1,71 @@
+﻿@model IEnumerable<haunt_map_users.Models.Haunt>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table dataTable table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Story)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.longitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Story)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.latitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.longitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts{
+<script type="text/javascript" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+<script>
+
+    $(document).ready( function () {
+        $('.dataTable').DataTable();
+    } );
+</script>   
+}

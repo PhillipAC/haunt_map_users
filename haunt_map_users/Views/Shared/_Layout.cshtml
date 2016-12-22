@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @if ( ViewBag.Title != null ) {
+            <title>Haunt Map | @ViewBag.Title</title>
+    } else {
+        <title>Haunt Map</title>
+    }
+    <title>Haunt Map @ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    @Html.Partial("_Header")
+    <div class="container body-content">
+        @RenderBody()
+        @Html.Partial("_Footer")
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("styles", required: false)
+</body>
+</html>

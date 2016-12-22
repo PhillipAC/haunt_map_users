@@ -1,0 +1,74 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.center {
+    text-align: center;
+}
+
+.jumbotron {
+    margin: 20px;
+}
+
+/*Footer Information*/
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+.footer > a {
+    color: #555;
+}
+
+.footer > small {
+    float: left;
+}
+
+.footer > nav > ul {
+    float: right;
+    list-style: none;
+}
+
+.footer > nav > ul > li {
+      float: left;
+      margin-left: 15px;
+}
+
+.mapcontent{
+    color: black;
+}
+
+table.dataTable tbody tr{
+    background-color: black;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate{
+    color: white;
+}
+
+select{
+    color:black;
+}

@@ -1,0 +1,75 @@
+﻿@model haunt_map_users.Models.Haunt
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Haunt</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Story, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Story, new { htmlAttributes = new { @class = "form-control", style = "width: 400px; height: 100px" } })
+                @Html.ValidationMessageFor(model => model.Story, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Location</label>
+            <div class="col-md-10">
+                <div id="googleMap" style="height: 400px; width: 400px;"></div>
+                @Html.HiddenFor(model => model.latitude, new { htmlAttributes = new { @class = "form-control" }, id = "lat"  })
+                @Html.ValidationMessageFor(model => model.latitude, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.longitude, new { htmlAttributes = new { @class = "form-control" }, id = "lng"  })
+                @Html.ValidationMessageFor(model => model.longitude, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAe8MfxGp3mpDLGvV6PhBQXjJ62YaC46XY&v=3&amp;sensor=false"></script>
+    @Scripts.Render("~/bundles/googlemaps")
+    <script>
+            var user_position = { lat: '@Html.DisplayFor(model => model.latitude)', lng: '@Html.DisplayFor(model => model.longitude)' }
+            $(document).ready(initMap(user_position));
+    </script>
+}
