@@ -1,4 +1,4 @@
-﻿@model IEnumerable<haunt_map_users.Models.Haunt>
+﻿@model IEnumerable<haunt_map_users.ViewModels.HauntViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary btn-sm" })
 </p>
 <table class="table dataTable table-striped table-bordered">
     <thead>
@@ -16,16 +16,13 @@
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Story)
+                @Html.DisplayNameFor(model => model.Latitude)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.latitude)
+                @Html.DisplayNameFor(model => model.Longitude)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.longitude)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
+                @Html.DisplayNameFor(model => model.Author)
             </th>
             <th></th>
         </tr>
@@ -38,20 +35,18 @@
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Story)
+                    @Html.DisplayFor(modelItem => item.Latitude)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.latitude)
+                    @Html.DisplayFor(modelItem => item.Longitude)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.longitude)
+                    @Html.DisplayFor(modelItem => item.Author)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.UserId)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+
                     @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                 </td>
             </tr>

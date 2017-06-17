@@ -1,4 +1,4 @@
-﻿@model haunt_map_users.Models.Haunt
+﻿@model haunt_map_users.ViewModels.HauntViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -27,27 +27,27 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.latitude)
+            @Html.DisplayNameFor(model => model.Latitude)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.latitude)
+            @Html.DisplayFor(model => model.Latitude)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.longitude)
+            @Html.DisplayNameFor(model => model.Longitude)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.longitude)
+            @Html.DisplayFor(model => model.Longitude)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.UserId)
+            @Html.DisplayNameFor(model => model.Author)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.UserId)
+            @Html.DisplayFor(model => model.Author)
         </dd>
 
     </dl>

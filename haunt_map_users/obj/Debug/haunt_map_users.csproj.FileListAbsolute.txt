@@ -70,6 +70,13 @@ C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map
 C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\obj\Debug\haunt_map_users.csproj.GenerateResource.Cache
 C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\obj\Debug\haunt_map_users.Migrations.Initial.resources
 C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\obj\Debug\haunt_map_users.Migrations.AddUserToTour.resources
-C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\obj\Debug\haunt_map_users.csprojResolveAssemblyReference.cache
 C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\bin\Mvc.JQuery.DataTables.Core.dll
 C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\bin\Mvc.JQuery.DataTables.dll
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\obj\Debug\haunt_map_users.Migrations.updateHauntWithGuid.resources
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\bin\System.Net.Http.Formatting.dll
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\bin\System.Web.Http.dll
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\bin\System.Web.Http.WebHost.dll
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\bin\System.Net.Http.Formatting.xml
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\bin\System.Web.Http.xml
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\bin\System.Web.Http.WebHost.xml
+C:\Users\Phillip\Documents\Visual Studio 2015\Projects\haunt_map_users\haunt_map_users\obj\Debug\haunt_map_users.csprojResolveAssemblyReference.cache

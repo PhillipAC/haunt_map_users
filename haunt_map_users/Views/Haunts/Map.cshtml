@@ -1,4 +1,4 @@
-﻿@model IEnumerable<haunt_map_users.Models.Haunt>
+﻿@model IEnumerable<haunt_map_users.ViewModels.HauntViewModel>
 
 @{
     ViewBag.Title = "Map";
@@ -11,20 +11,24 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAe8MfxGp3mpDLGvV6PhBQXjJ62YaC46XY&v=3&amp;sensor=false"></script>
-    <script>
-        var haunts = [
-        @foreach(var item in Model) {
-        <text>
-          ['@Html.DisplayFor(modelItem => item.Title)',
-           @Html.DisplayFor(modelItem => item.latitude),
-           @Html.DisplayFor(modelItem => item.longitude),
-           @Html.DisplayFor(modelItem => item.ID),
-           '@Html.DisplayFor(modelItem => item.Story)'],
-        </text>
-        }];
-    </script>
     @Scripts.Render("~/bundles/googlemapicons")
     @Scripts.Render("~/bundles/geolocation")
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAe8MfxGp3mpDLGvV6PhBQXjJ62YaC46XY&v=3&amp;sensor=false"></script>
+    <script>
+        var haunts = [];
+
+
+        $('document').ready(function () {
+            $.ajax({
+                url: '@Url.RouteUrl("DefaultApi", new { httproute = "", controller = "Haunts"})',
+                type: 'GET',
+                dataType: 'JSON',
+                success: function (data, textStatus, jqXHR) {
+                    haunts = data;
+                    geoLocation.request_distance();
+                }
+            });
+        });
+    </script>
 }
 
